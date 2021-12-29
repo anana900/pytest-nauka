@@ -6,11 +6,12 @@ node
 	{
 		try
 		{
+			ls -al
     		publishHTML([
     				 allowMissing: false,
     		         alwaysLinkToLastBuild: true,
     		         keepAll: true,
-    		         reportDir: '../',
+    		         reportDir: '.',
     		         reportFiles: 'wyniki.html',
     		         reportName: 'Pytest-Raport-Testów'
     		         ])
