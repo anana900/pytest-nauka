@@ -1,67 +1,19 @@
 node
 {
 	echo "Welcome!"
-	stage('setup')
+
+	stage('raport') 
 	{
 		try
 		{
-			echo "Setup"
-			sh 'ls -la'	    
-		}
-		catch(err)
-		{
-			echo err
-		}
-	}
-
-	stage('build') 
-	{
-		try
-		{
-			echo "Build"
-			dir('Debug')
-			{
-				sh 'make'
-			}
-    
-		}
-		catch(err)
-		{
-			echo err
-		}
-	}
-   
-	stage('test') 
-	{
-		try
-		{
-			echo "Test"
-			dir('Debug')
-			{
-				sh './ansic'
-			} 
-		}
-		catch(err)
-		{
-			echo err
-		}
-	}
-
-	stage('end') 
-	{
-		try
-		{
-
-		publishHTML([
-				 allowMissing: false,
-		         alwaysLinkToLastBuild: true,
-		         keepAll: true,
-		         reportDir: '../wyniki.html',
-		         reportFiles: 'index.html',
-		         reportName: 'PYTEST-WYNIKI-TESTOW'
-		         ])
-
-   
+    		publishHTML([
+    				 allowMissing: false,
+    		         alwaysLinkToLastBuild: true,
+    		         keepAll: true,
+    		         reportDir: '../',
+    		         reportFiles: 'wyniki.html',
+    		         reportName: 'Pytest-Raport-Testów'
+    		         ])
 		}
 		catch(err)
 		{
