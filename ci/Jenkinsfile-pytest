@@ -6,7 +6,6 @@ node
 	{
 		try
 		{
-			ls -al
     		publishHTML([
     				 allowMissing: false,
     		         alwaysLinkToLastBuild: true,
