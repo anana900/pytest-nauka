@@ -1,0 +1,6 @@
+.env
+.env.leave
+.project
+.pydevproject
+assets/
+venv/

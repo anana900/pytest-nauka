@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="anana-T440p" name="pytest" skipped="0" tests="11" time="0.757" timestamp="2021-12-29T23:37:18.795595"><testcase classname="test.test_api" name="test_list_valid_users[1-cerulean]" time="0.092" /><testcase classname="test.test_api" name="test_list_valid_users[2-fuchsia rose]" time="0.091" /><testcase classname="test.test_api" name="test_list_invaliduser" time="0.445" /><testcase classname="test.test_fa" name="test_funkcja_aplikacji_1" time="0.002" /><testcase classname="test.test_fa" name="test_funkcja_aplikacji_2" time="0.002" /><testcase classname="test.test_fa" name="test_funkcja_a" time="0.001" /><testcase classname="test.test_fb" name="test_funkcja_aplikacji_1" time="0.001" /><testcase classname="test.test_fb" name="test_funkcja_aplikacji_2[ala-ola-alaola]" time="0.001" /><testcase classname="test.test_fb" name="test_funkcja_aplikacji_2[ - -  ]" time="0.001" /><testcase classname="test.test_fb" name="test_funkcja_a0" time="0.001" /><testcase classname="test.test_fb" name="test_funkcja_a1" time="0.001"><failure message="assert 1 == 2&#10;  +1&#10;  -2">@pytest.mark.dupa2
+    def test_funkcja_a1():
+&gt;       assert 1==2
+E       assert 1 == 2
+E         +1
+E         -2
+
+test/test_fb.py:24: AssertionError</failure></testcase></testsuite></testsuites>
