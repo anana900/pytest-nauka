@@ -5,7 +5,9 @@ node
 	stage('raport') 
 	{
 		try
-		{	
+		{
+			sh "pwd"
+			dir("pytest-przyklad") {
 				sh "pwd"
     			publishHTML([
     				 allowMissing: false,
@@ -15,6 +17,7 @@ node
     		         reportFiles: 'wyniki.html',
     		         reportName: 'Pytest-Raport-Testów'
     		         ])
+			}
 		}
 		catch(err)
 		{
