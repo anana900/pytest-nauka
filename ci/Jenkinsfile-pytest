@@ -7,8 +7,10 @@ node
 		try
 		{
 			sh "pwd"
-			dir("pytest-przyklad") {
+			sh "ls -al"
+			dir(".") {
 				sh "pwd"
+				sh "ls -al"
     			publishHTML([
     				 allowMissing: false,
     		         alwaysLinkToLastBuild: true,
