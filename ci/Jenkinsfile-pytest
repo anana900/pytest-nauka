@@ -2,24 +2,34 @@ node
 {
 	echo "Welcome!"
 
+	stage('pobranie')
+	{
+		try
+		{
+			echo "Setup"
+			git 'https://github.com/anana900/pytest-nauka.git'	
+			sh 'ls -la'	    
+		}
+		catch(err)
+		{
+			echo err
+		}
+	}
+
 	stage('raport') 
 	{
 		try
 		{
 			sh "pwd"
 			sh "ls -al"
-			dir(".") {
-				sh "pwd"
-				sh "ls -al"
     			publishHTML([
     				 allowMissing: false,
     		         alwaysLinkToLastBuild: true,
     		         keepAll: true,
-    		         reportDir: '',
+    		         reportDir: 'pytest-nauka',
     		         reportFiles: 'wyniki.html',
     		         reportName: 'Pytest-Raport-Testów'
     		         ])
-			}
 		}
 		catch(err)
 		{
