@@ -5,20 +5,16 @@ node
 	stage('raport') 
 	{
 		try
-		{
-			sh "pwd"
-			dir("..") {
-			
+		{	
 				sh "pwd"
     			publishHTML([
     				 allowMissing: false,
     		         alwaysLinkToLastBuild: true,
     		         keepAll: true,
-    		         reportDir: '..',
+    		         reportDir: 'pytest-przyklad/',
     		         reportFiles: 'wyniki.html',
     		         reportName: 'Pytest-Raport-Testów'
     		         ])
-			}
 		}
 		catch(err)
 		{
