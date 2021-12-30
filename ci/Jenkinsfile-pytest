@@ -6,7 +6,11 @@ node
 	{
 		try
 		{
-    		publishHTML([
+			sh "pwd"
+			dir("..") {
+			
+				sh "pwd"
+    			publishHTML([
     				 allowMissing: false,
     		         alwaysLinkToLastBuild: true,
     		         keepAll: true,
@@ -14,6 +18,7 @@ node
     		         reportFiles: 'wyniki.html',
     		         reportName: 'Pytest-Raport-Testów'
     		         ])
+			}
 		}
 		catch(err)
 		{
